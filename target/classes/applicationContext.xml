@@ -7,15 +7,16 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <context:property-placeholder location="classpath:musicPlayer.properties" />
+    <context:component-scan base-package="kz.kaisar.springmvc02" />
 
-    <bean id="musicBean1"
-          class="kz.kaisar.springmvc02.ClassicalMusic"
-          init-method="doMyInit"
-          destroy-method="doMyDestroy"
-          scope="prototype"
-          factory-method="getClassicalMusic">
-    </bean>
+
+<!--    <bean id="musicBean1"-->
+<!--          class="kz.kaisar.springmvc02.ClassicalMusic"-->
+<!--          init-method="doMyInit"-->
+<!--          destroy-method="doMyDestroy"-->
+<!--          scope="prototype"-->
+<!--          factory-method="getClassicalMusic">-->
+<!--    </bean>-->
 
 <!--    <bean id="musicBean2"-->
 <!--          class="kz.kaisar.springmvc02.RockMusic"-->
