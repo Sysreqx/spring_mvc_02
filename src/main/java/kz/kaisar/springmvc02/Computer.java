@@ -18,7 +18,7 @@ public class Computer {
     public void runMusicPlayer() {
         System.out.println("Computer #" + id + " running music player");
         System.out.println("\tMusic player playing:");
-        musicPlayer.playMusic();
+        musicPlayer.playMusic(MusicGenre.CLASSICAL);
     }
 
 }

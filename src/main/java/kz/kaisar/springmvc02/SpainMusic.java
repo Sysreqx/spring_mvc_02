@@ -17,4 +17,9 @@ public class SpainMusic implements Music{
     public String getSong() {
         return "Spain Music";
     }
+
+    @Override
+    public String getSong(int randNumber) {
+        return null;
+    }
 }
