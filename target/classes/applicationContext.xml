@@ -13,7 +13,9 @@
 
     <bean id="musicPlayer"
           class="kz.kaisar.springmvc02.MusicPlayer">
-    <constructor-arg ref="musicBean" />
+        <property name="music" ref="musicBean" />
+        <property name="name" value="Some Name" />
+        <property name="volume" value="50" />
     </bean>
 
 </beans>
