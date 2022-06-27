@@ -1,10 +1,12 @@
 package kz.kaisar.springmvc02;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Component
 public class MusicPlayer {
 
     private List<Music> musicList = new ArrayList<>();
@@ -13,6 +15,7 @@ public class MusicPlayer {
 
     private int volume;
 
+    @Autowired
     public MusicPlayer(List<Music> musicList) {
         this.musicList = musicList;
     }
@@ -46,7 +49,7 @@ public class MusicPlayer {
 
     public void playMusic() {
         for (Music music : musicList) {
-            System.out.println("Playing" + music.getSong());
+            System.out.println("\t\tPlaying" + music.getSong());
         }
     }
 }
