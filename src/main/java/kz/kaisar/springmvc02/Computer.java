@@ -15,10 +15,18 @@ public class Computer {
         this.musicPlayer = musicPlayer;
     }
 
-    public void runMusicPlayer() {
+    public MusicPlayer getMusicPlayer() {
+        return musicPlayer;
+    }
+
+    public void setMusicPlayer(MusicPlayer musicPlayer) {
+        this.musicPlayer = musicPlayer;
+    }
+
+    public void runMusicPlayer(MusicGenre musicGenre) {
         System.out.println("Computer #" + id + " running music player");
         System.out.println("\tMusic player playing:");
-        musicPlayer.playMusic(MusicGenre.CLASSICAL);
+        musicPlayer.playMusic(musicGenre);
     }
 
 }

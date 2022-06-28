@@ -1,8 +1,12 @@
 package kz.kaisar.springmvc02;
 
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,6 +19,16 @@ public class ClassicalMusic implements Music {
         classicalMusicList.add("Classical music #1");
         classicalMusicList.add("Classical music #2");
         classicalMusicList.add("Classical music #3");
+    }
+
+    @PostConstruct
+    public void doMyInit() {
+        System.out.println("Doing classical music doMyInit()");
+    }
+
+    @PreDestroy
+    public void doMyDestroy() {
+        System.out.println("Doing classical music doMyDestroy()");
     }
 
     @Override
